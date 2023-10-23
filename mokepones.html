@@ -3,19 +3,34 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Mokepones</title>
+		<title>Cutepones</title>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<h1>Mokepones 🔥💧🌿</h1>
 		<section id="selectPet">
-			<h2>Choose your pet:</h2>
+			<h1 class="title"> Cute Pon🌿🔥💧</h1>
 
-			<label for="hipodoge">hipodoge</label>
-			<input type="radio" name="pet" id="hipodoge">
-			<label for="capipepo">capipepo</label>
-			<input type="radio" name="pet" id="capipepo">
-			<label for="ratigueya">ratigueya</label>
-			<input type="radio" name="pet" id="ratigueya">
+			<h2 class="subtitle">Choose your pet</h2>
+
+			<div class="cards">
+				<input type="radio" name="pet" id="hipodoge">
+				<label class="mokeponCardHipodoge" for="hipodoge">
+					<img src="img/plant.png" alt="">
+					<p>hipodoge</p>
+				</label>
+
+				<input type="radio" name="pet" id="capipepo">
+				<label class="mokeponCardCapipepo" for="capipepo">
+					<img src="img/fire.png" alt="">
+					<p>capipepo</p>
+				</label>
+
+				<input type="radio" name="pet" id="ratigueya">
+				<label class="mokeponCardRatigueya" for="ratigueya">
+					<img src="img/watter.png" alt="">
+					<p>ratigueya</p>
+				</label>
+			</div>
 <!-- 			<label >langostelvis</label>
 			<input type="radio" name="pet" id="langostelvis">
 			<label >tucapalma</label>
@@ -34,25 +49,39 @@
 		</section>
 
 		<section id="selectAttack">
-			<h2>Choose your Attacks:</h2>
-			<p>yours pet has <span>3</span> lives</p>
-			<p>the enemy's pet has <span>3</span> lives</p>
+			<h1 class="title">Mokepones 🔥💧🌿</h1> 
+			  
+			<h2 class="subtitle">Choose your attack</h2>
+
+			<div class="attacks">
+				<button class="btnAttack" id="btnFire">🔥</button>
+				<button class="btnAttack" id="btnWatter">💧</button>
+				<button class="btnAttack" id="btnPlant">🌿</button>
+			</div>
+
+				<div id="message">
+					<p id="result">Mucha suerte</p>
+
+					<section id="restart">
+						<button id="btnRestart">Restart</button>
+					</section>
+				</div>
+
+			<div class="gridFather">
+				<div class="playerGrid">
+					<p id="playerLife">3</p> 
+					<p id="playerPetName"></p> 
+					<div id="playerAttacks"></div>
+				</div>
+
+				<div class="enemyGrid">
+					<p id="enemyLife">3<p/>
+					<p id="enemyPetName"><p/>
+					<div id="enemyAttacks"></div>
+				</div>
+			</div>
 		</section>
 
-		<p>
-			<button id="btnFire">Fire🔥</button>
-			<button id="btnWatter">Watter 💧</button>
-			<button id="btnPlant">Plant 🌿</button>
-		</p>
-
-        <section id="message">
-            <p>your pet attack with fire,the enemy's pet attack with plant-you won</p>
-        </section>
-
-        <section id="restart">
-            <button id="btnRestart">Restart</button>
-        </section>
-
-		<script src="./js/mokepon.js"></script>
+		<script src="./mokepon.js"></script>
 	</body>
 </html>
